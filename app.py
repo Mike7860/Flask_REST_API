@@ -80,20 +80,13 @@ class AddressesList(Resource):
     # @app.route('/', methods=['GET'])
     def get(self):
         addressess = AddressModel.query.all()
-        #adressess = AddressModel.query.filter_by(value="high").all()
 
         return {'Addresses': list(x.json() for x in addressess)}
-        # return jsonify(addresses)
-
-    # @app.route('/filtered', methods=['GET'])
-    # def get_addreses_filtered(self):
-    #     return jsonify(addresses)
 
     # @app.route('/add', methods=['POST', 'GET'])
     def post(self):
         data = request.get_json()
         new_address = AddressModel(data['name'], data['address'], data['city'], data['state'], data['postal_code'], data['value'], data['created'])
-        #new_address = AddressModel(data['address'])
         db.session.add(new_address)
         db.session.commit()
         return new_address.json(), 201
