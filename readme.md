@@ -24,6 +24,6 @@ BODY {
         "created": "{utc.datetime}"
     }
 
-Endpoints:
+# Endpoints:
 / - list all stored addresses in db, add new address
 /filtered - list filtered (value="high") addresses in db
