@@ -1,14 +1,14 @@
+# General info
 Project performed on venv in Python 3.9
-
 Creating virtual environment is mandatory
 
-In CMD:
+# In CMD:
 pip install -r requirements.txt
 cd venv 
 cd Scripts
 activate
 
-Run app:
+# Run app:
 python app.py
 
 Suggest using Postman to check that API
@@ -26,4 +26,4 @@ BODY {
 
 Endpoints:
 / - list all stored addresses in db, add new address
-/ - list filtered (value="high") addresses in db
+/filtered - list filtered (value="high") addresses in db
